@@ -1,10 +1,9 @@
 {
-  "name": "starwars",
+  "name": "gihubsearchapi",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "gh-pages": "^2.0.1",
     "node-sass": "^4.12.0",
     "parse-link-header": "^1.0.1",
     "prop-types": "^15.7.2",
@@ -18,9 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
+
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,6 +27,5 @@
     "browserslist": "4.6.2",
     "caniuse-lite": "1.0.30000974"
   },
-  "browserslist": [],
-  "homepage": "https://Arty-K/testrepo/"
+  "browserslist": []
 }

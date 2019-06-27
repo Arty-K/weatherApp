@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/testrepo/tree/v2/static/css/main.8d97b739.chunk.css",
-    "main.js": "/testrepo/tree/v2/static/js/main.4328289b.chunk.js",
-    "main.js.map": "/testrepo/tree/v2/static/js/main.4328289b.chunk.js.map",
-    "runtime~main.js": "/testrepo/tree/v2/static/js/runtime~main.a2f31d83.js",
-    "runtime~main.js.map": "/testrepo/tree/v2/static/js/runtime~main.a2f31d83.js.map",
-    "static/js/2.ab40a076.chunk.js": "/testrepo/tree/v2/static/js/2.ab40a076.chunk.js",
-    "static/js/2.ab40a076.chunk.js.map": "/testrepo/tree/v2/static/js/2.ab40a076.chunk.js.map",
-    "index.html": "/testrepo/tree/v2/index.html",
-    "precache-manifest.463102aa267b0ebc8c13938f907306a7.js": "/testrepo/tree/v2/precache-manifest.463102aa267b0ebc8c13938f907306a7.js",
-    "service-worker.js": "/testrepo/tree/v2/service-worker.js",
-    "static/css/main.8d97b739.chunk.css.map": "/testrepo/tree/v2/static/css/main.8d97b739.chunk.css.map"
+    "main.css": "/newrepo/static/css/main.8d97b739.chunk.css",
+    "main.js": "/newrepo/static/js/main.4328289b.chunk.js",
+    "main.js.map": "/newrepo/static/js/main.4328289b.chunk.js.map",
+    "runtime~main.js": "/newrepo/static/js/runtime~main.328ba6f5.js",
+    "runtime~main.js.map": "/newrepo/static/js/runtime~main.328ba6f5.js.map",
+    "static/js/2.ab40a076.chunk.js": "/newrepo/static/js/2.ab40a076.chunk.js",
+    "static/js/2.ab40a076.chunk.js.map": "/newrepo/static/js/2.ab40a076.chunk.js.map",
+    "index.html": "/newrepo/index.html",
+    "precache-manifest.908f294c4d35910a65feb256df2cbe5a.js": "/newrepo/precache-manifest.908f294c4d35910a65feb256df2cbe5a.js",
+    "service-worker.js": "/newrepo/service-worker.js",
+    "static/css/main.8d97b739.chunk.css.map": "/newrepo/static/css/main.8d97b739.chunk.css.map"
   }
 }

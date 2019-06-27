@@ -1,0 +1,17 @@
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+}
+ul, li {
+  list-style: none;
+}
+.pagination {
+  justify-content: space-between;
+}
+.organisationAvatar {
+   width: 150px;
+   height: 150px;
+}
+.userAvatar {
+  width: 115px;
+  height: 115px;
+}

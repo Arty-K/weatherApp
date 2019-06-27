@@ -2,42 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bc030e3-6e39-4346-9600-6de4dcea3d58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Organisation/OrganisationPage/OrganisationBody.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Organisation/OrganisationPage/OrganisationHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Organisation/OrganisationPage/OrganisationList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Organisation/OrganisationPage/OrganisationPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pagination/PaginationButtons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/OrganisationSearch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/User/UserPage/Collaborators.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/User/UserPage/Followers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/User/UserPage/FollowersList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/User/UserPage/Following.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/User/UserPage/Members.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/User/UserPage/UserPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/User/UserPage/UsersList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/spinner/Spinner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/spinner/spinner.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/fetchCollaborators.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/fetchFollowers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/fetchFollowing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/fetchOrgs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/fetchUsers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/getOrganisationInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/getSearchResult.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/getUserInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/paginationClickCollaborators.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/paginationClickFollowers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/paginationClickFollowing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/paginationClickOrgs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/paginationClickUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -56,12 +25,12 @@
             <entry file="file://$PROJECT_DIR$/src/main.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="256">
-                  <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+                  <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/Organisation/OrganisationPage/OrganisationList.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="160">
@@ -86,40 +55,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/User/UserPage/UsersList.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="704">
-                  <caret line="48" column="64" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="64" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/services/fetchCollaborators.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="48">
-                  <caret line="3" column="54" selection-end-line="17" selection-end-column="2" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/Organisation/OrganisationPage/OrganisationPage.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-616">
                   <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/services/fetchFollowers.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
@@ -133,11 +72,32 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/package.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="448">
-                  <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+                <state relative-caret-position="240">
+                  <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/package-lock.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-220536">
+                  <caret column="1" selection-start-column="1" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SPLIT">
+                  <first_editor relative-caret-position="192">
+                    <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+                  </first_editor>
+                  <second_editor />
                 </state>
               </provider>
             </entry>
@@ -147,6 +107,15 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="368">
                   <caret line="23" selection-start-line="23" selection-end-line="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="48">
+                  <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -219,7 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/UserPage/UserPage.js" />
         <option value="$PROJECT_DIR$/src/components/OrganisationPage/spinner/Spinner.js" />
         <option value="$PROJECT_DIR$/src/components/OrganisationPage/UsersList.js" />
         <option value="$PROJECT_DIR$/src/components/services/ApiService.js" />
@@ -266,19 +234,21 @@
         <option value="$PROJECT_DIR$/src/components/User/UserPage/Followers.js" />
         <option value="$PROJECT_DIR$/src/components/Search/OrganisationSearch.js" />
         <option value="$PROJECT_DIR$/src/components/User/UserPage/FollowersList.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main.scss" />
         <option value="$PROJECT_DIR$/src/components/Organisation/OrganisationPage/OrganisationList.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1992" />
     <option name="y" value="-8" />
     <option name="width" value="1856" />
     <option name="height" value="1096" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -291,6 +261,11 @@
             <path>
               <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
               <item name="starwars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
+              <item name="starwars" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
@@ -421,12 +396,12 @@
       <workItem from="1561358433843" duration="18635000" />
       <workItem from="1561393179541" duration="5814000" />
       <workItem from="1561435989591" duration="43675000" />
-      <workItem from="1561531933018" duration="59086000" />
+      <workItem from="1561531933018" duration="60699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204264000" />
+    <option name="totallyTimeSpent" value="205877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1992" y="-8" width="1856" height="1096" extended-state="6" />
@@ -437,7 +412,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32917964" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -475,30 +450,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="459">
-            <caret line="27" column="117" selection-start-line="27" selection-start-column="117" selection-end-line="27" selection-end-column="117" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/demo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1020">
@@ -787,20 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Organisation/OrganisationPage/OrganisationPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-616">
@@ -811,7 +748,7 @@
     <entry file="file://$PROJECT_DIR$/src/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -832,6 +769,44 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220536">
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="192">
+            <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
         </state>
       </provider>
     </entry>

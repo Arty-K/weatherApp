@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import getOrganisationInfo from '../../../services/getOrganisationInfo';
 
 
-const OrganisationList = ({ organisationList, getOrganisationInfo }) => {
+const OrganisationList = ({ organisationList }) => {
     return (
         <>
             <h3 className = 'text-center'>

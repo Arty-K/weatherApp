@@ -1,7 +1,7 @@
 import parse from "parse-link-header";
 
 
-export default async function fetchUsers (url) {
+const fetchUsers = async(url) => {
 	await fetch(url)
 		.then(response => response.json()
 			.then(data =>
@@ -16,3 +16,5 @@ export default async function fetchUsers (url) {
 			this.setState({ error })
 		);
 };
+
+export default fetchUsers;

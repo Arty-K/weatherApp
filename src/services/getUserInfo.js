@@ -1,6 +1,6 @@
 import parse from "parse-link-header";
 
-export default async function getUserInfo ( userName = '' ) {
+  const getUserInfo = async ( userName = '' ) => {
     this.setState({ isLoading: true, activePage: '1' });
 
     if ( userName !== '' ){
@@ -42,6 +42,6 @@ export default async function getUserInfo ( userName = '' ) {
     }
 };
 
-
+export default getUserInfo;
 
 

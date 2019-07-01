@@ -5,15 +5,12 @@ import Followers from './Followers';
 import Following from './Following';
 
 
-
 const FollowersList = (
     {
         followers,
         following,
         followersList,
         followingList,
-        paginationClickFollowers,
-        paginationClickFollowing,
         activePage
     }) => {
         return (
@@ -30,7 +27,6 @@ const FollowersList = (
                             <Card.Body>
                                 <Followers
                                     followersList = { followersList }
-                                    paginationClickFollowers = { paginationClickFollowers }
                                     activePage ={ activePage }
                                 />
                             </Card.Body>
@@ -46,7 +42,6 @@ const FollowersList = (
                             <Card.Body>
                                 <Following
                                     followingList = { followingList }
-                                    paginationClickFollowing = { paginationClickFollowing }
                                     activePage ={ activePage }
                                 />
                             </Card.Body>

@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import { Col, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import PaginationButtons from "../../Pagination/PaginationButtons";
+import { paginationClickUsers } from '../../../services/paginationServices';
+import getUserInfo from '../../../services/getUserInfo';
 
 
-const Members = ({ membersList, paginationClickUsers, activePage, getUserInfo }) => {
+const Members = ({ membersList, activePage }) => {
     return(
         <>
             {membersList.map((item) =>

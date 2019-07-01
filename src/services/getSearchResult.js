@@ -1,7 +1,7 @@
 import parse from "parse-link-header";
 
 
-export default async function getSearchResult(event) {
+const getSearchResult = async (event) => {
     const input = this.state.inputValue;
     event.preventDefault();
     fetch(`https://api.github.com/search/users?q=${input}+type:org`)
@@ -21,3 +21,4 @@ export default async function getSearchResult(event) {
 };
 
 
+export default getSearchResult;

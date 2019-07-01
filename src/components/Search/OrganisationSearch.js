@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PaginationButtons from '../Pagination/PaginationButtons';
 import OrganisationList from '../Organisation/OrganisationPage/OrganisationList';
+
+import { paginationClickOrgs } from '../../services/paginationServices';
+
 import {
     Container,
     Row,
@@ -12,18 +15,19 @@ import {
 } from 'react-bootstrap';
 
 
-const OrganisationSearch = ( props ) => {
-    const {
-        inputValue,
-        onSearchChange,
-        getSearchResult,
-        organisationList,
-        isLoading,
-        activePage,
-        getOrganisationInfo,
-        paginationClickOrgs
-    } = props;
-    return(
+export default class OrganisationSearch extends Component {
+    state = {};
+
+    render(){
+        const {
+            inputValue,
+            onSearchChange,
+            organisationList,
+            isLoading,
+            getSearchResult,
+            activePage
+    } = this.props;
+        return(
         <>
             <Container>
                 <Row className = 'pt-5 pb-2'>
@@ -64,7 +68,6 @@ const OrganisationSearch = ( props ) => {
                             <>
                                 <OrganisationList
                                     organisationList = { organisationList }
-                                    getOrganisationInfo = { getOrganisationInfo }
                                 />
                                 {(organisationList.total_count > 30) ?
                                     (
@@ -84,6 +87,8 @@ const OrganisationSearch = ( props ) => {
             </Container>
         </>
     )
+    }
+
 };
 
 
@@ -99,6 +104,3 @@ OrganisationSearch.propTypes = {
     paginationClick : PropTypes.func,
     paginationClickOrgs : PropTypes.func
 };
-
-
-export default OrganisationSearch;

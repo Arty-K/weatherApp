@@ -5,14 +5,10 @@ import Members from './Members';
 import Collaborators from './Collaborators';
 
 
-
 const UsersList = (
     {
         membersList,
         collaboratorsList,
-        getUserInfo,
-        paginationClickUsers,
-        paginationClickCollaborators,
         activePage,
     }) => {
         return (
@@ -29,8 +25,6 @@ const UsersList = (
                             <Card.Body>
                                 <Members
                                     membersList = { membersList }
-                                    paginationClickUsers = { paginationClickUsers }
-                                    getUserInfo = { getUserInfo }
                                     activePage ={ activePage }
                                 />
                             </Card.Body>
@@ -46,8 +40,6 @@ const UsersList = (
                             <Card.Body>
                                 <Collaborators
                                     collaboratorsList = { collaboratorsList }
-                                    paginationClickCollaborators = { paginationClickCollaborators }
-                                    getUserInfo = { getUserInfo }
                                     activePage ={ activePage }
                                 />
                             </Card.Body>

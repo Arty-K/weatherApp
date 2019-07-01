@@ -19,11 +19,7 @@ const OrganisationPage = ( props ) => {
             membersList,
             collaboratorsList,
             isLoading,
-            paginationClickUsers,
-            paginationClickCollaborators,
-            activePage,
-            getUserInfo,
-            accordionClick
+            activePage
         } = props;
         return(
             <>
@@ -42,11 +38,7 @@ const OrganisationPage = ( props ) => {
                             <UsersList
                                 membersList = { membersList }
                                 collaboratorsList = { collaboratorsList }
-                                paginationClickUsers = { paginationClickUsers }
-                                paginationClickCollaborators = { paginationClickCollaborators }
                                 activePage = { activePage }
-                                getUserInfo = { getUserInfo }
-                                accordionClick = { accordionClick }
                             />
                         </ListGroup>
                     </Container>

@@ -1,6 +1,6 @@
 import parse from "parse-link-header";
 
-export default async function getOrganisationInfo ( orgName = '' ) {
+const getOrganisationInfo = async ( orgName = '' ) => {
     this.setState({ isLoading: true });
     if ( orgName !== '' ){
         await Promise.all([
@@ -43,5 +43,5 @@ export default async function getOrganisationInfo ( orgName = '' ) {
     }
 };
 
-
+export default getOrganisationInfo;
 

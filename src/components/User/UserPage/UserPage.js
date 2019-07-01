@@ -19,8 +19,6 @@ const UserPage = ( props ) => {
         isLoading,
         followersList,
         followingList,
-        paginationClickFollowers,
-        paginationClickFollowing,
         activePage
     } = props;
         return(
@@ -68,8 +66,6 @@ const UserPage = ( props ) => {
                                 following = { following }
                                 followersList = { followersList }
                                 followingList = { followingList }
-                                paginationClickFollowers = { paginationClickFollowers }
-                                paginationClickFollowing = { paginationClickFollowing }
                                 activePage = { activePage }
                             />
                     </Container>

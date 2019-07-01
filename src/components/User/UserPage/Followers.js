@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Image, Row } from 'react-bootstrap';
 import PaginationButtons from "../../Pagination/PaginationButtons";
+import { paginationClickFollowers } from '../../../services/paginationServices';
 
 
-const Followers = ({ followersList, paginationClickFollowers, activePage }) => {
+const Followers = ({ followersList, activePage }) => {
     return(
         <>
             {followersList.map((item) =>

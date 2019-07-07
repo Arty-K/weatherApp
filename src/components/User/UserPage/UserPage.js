@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { Container, Image, ListGroup } from 'react-bootstrap';
 import Spinner from '../../spinner/Spinner';
 import FollowersList from "./FollowersList";
+import { paginationClickFollowing } from '../../../store/actions/pagination'
+import { paginationClickFollowers } from '../../../store/actions/pagination'
+import { connect } from 'react-redux';
 
 
 const UserPage = ( props ) => {
@@ -18,8 +21,12 @@ const UserPage = ( props ) => {
     const {
         isLoading,
         followersList,
+        followersLinks,
         followingList,
-        activePage
+        followingLinks,
+        activePage,
+        paginationClickFollowers,
+        paginationClickFollowing
     } = props;
         return(
             <>
@@ -66,8 +73,13 @@ const UserPage = ( props ) => {
                                 following = { following }
                                 followersList = { followersList }
                                 followingList = { followingList }
+                                followersLinks = { followersLinks }
+                                followingLinks = { followingLinks }
                                 activePage = { activePage }
-                            />
+                                paginationClickFollowers = { paginationClickFollowers }
+                                paginationClickFollowing = { paginationClickFollowing }
+
+                    />
                     </Container>
                     ) : ( <Spinner/> )
                 }
@@ -75,6 +87,25 @@ const UserPage = ( props ) => {
         )
 };
 
+const mapStateToProps = ( state ) => {
+    return {
+        currentUser: state.currentUser,
+        isLoading: state.isLoading,
+        followersList: state.followersList,
+        followersLinks: state.followersLinks,
+        followingList: state.followingList,
+        followingLinks: state.followingLinks,
+        activePage: state.activePage,
+
+    }
+};
+
+const mapDispatchToProps = ( dispatch ) => {
+    return {
+        paginationClickFollowers: (page) => dispatch(paginationClickFollowers(page)),
+        paginationClickFollowing: (page) => dispatch(paginationClickFollowing(page)),
+    }
+};
 
 UserPage.propTypes = {
     login: PropTypes.string,
@@ -87,4 +118,4 @@ UserPage.propTypes = {
 };
 
 
-export default UserPage;
+export default connect(mapStateToProps,mapDispatchToProps)(UserPage);

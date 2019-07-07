@@ -6,6 +6,10 @@ import OrganisationBody from './OrganisationBody';
 import UsersList from '../../User/UserPage/UsersList';
 import Spinner from '../../spinner/Spinner';
 
+import { connect } from 'react-redux';
+import { getUserInfo } from "../../../store/actions/getUserInfo";
+import { paginationClickUsers } from '../../../store/actions/pagination';
+
 
 const OrganisationPage = ( props ) => {
         const {
@@ -16,10 +20,15 @@ const OrganisationPage = ( props ) => {
             type
         } = props.currentOrganisation;
         const {
-            membersList,
+            usersList,
+            usersLinks,
             collaboratorsList,
+            collaboratorsLinks,
             isLoading,
-            activePage
+            activePage,
+            getUserInfo,
+            paginationClickUsers,
+            paginationClickCollaborators
         } = props;
         return(
             <>
@@ -36,9 +45,15 @@ const OrganisationPage = ( props ) => {
                                 blog = { blog }
                             />
                             <UsersList
-                                membersList = { membersList }
+                                usersList = { usersList }
+                                usersLinks = { usersLinks }
                                 collaboratorsList = { collaboratorsList }
+                                collaboratorsLinks = { collaboratorsLinks }
                                 activePage = { activePage }
+                                isLoading = { isLoading }
+                                getUserInfo = { getUserInfo }
+                                paginationClickUsers = { paginationClickUsers }
+                                paginationClickCollaborators = { paginationClickCollaborators }
                             />
                         </ListGroup>
                     </Container>
@@ -50,16 +65,34 @@ const OrganisationPage = ( props ) => {
         )
 };
 
+const mapStateToProps = ( state ) => {
+    return {
+        currentOrganisation: state.currentOrganisation,
+        usersList: state.usersList,
+        usersLinks: state.usersLinks,
+        collaboratorsList: state.collaboratorsList,
+        collaboratorsLinks: state.collaboratorsLinks,
+        isLoading: state.isLoading,
+        activePage: state.activePage,
+    }
+};
+
+const mapDispatchToProps = ( dispatch ) => {
+    return {
+        getUserInfo: (userName) => dispatch(getUserInfo(userName)),
+        paginationClickUsers: (userName) => dispatch(paginationClickUsers(userName))
+    }
+};
 
 OrganisationPage.propTypes = {
     name: PropTypes.string,
     avatar_url: PropTypes.string,
     blog: PropTypes.string,
     type: PropTypes.number,
-    membersList: PropTypes.array,
+    usersList: PropTypes.array,
     collaboratorsList: PropTypes.array,
     isLoading: PropTypes.bool,
 };
 
 
-export default OrganisationPage;
+export default connect(mapStateToProps, mapDispatchToProps)(OrganisationPage);

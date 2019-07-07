@@ -7,9 +7,14 @@ import Collaborators from './Collaborators';
 
 const UsersList = (
     {
-        membersList,
+        usersList,
+        usersLinks,
         collaboratorsList,
+        collaboratorsLinks,
         activePage,
+        getUserInfo,
+        paginationClickUsers,
+        paginationClickCollaborators
     }) => {
         return (
             <>
@@ -24,8 +29,11 @@ const UsersList = (
                         <Accordion.Collapse eventKey = '0'>
                             <Card.Body>
                                 <Members
-                                    membersList = { membersList }
-                                    activePage ={ activePage }
+                                    usersList = { usersList }
+                                    usersLinks = { usersLinks }
+                                    activePage = { activePage }
+                                    getUserInfo = { getUserInfo }
+                                    paginationClickUsers = { paginationClickUsers }
                                 />
                             </Card.Body>
                         </Accordion.Collapse>
@@ -40,7 +48,10 @@ const UsersList = (
                             <Card.Body>
                                 <Collaborators
                                     collaboratorsList = { collaboratorsList }
-                                    activePage ={ activePage }
+                                    collaboratorsLinks = { collaboratorsLinks }
+                                    activePage = { activePage }
+                                    getUserInfo = { getUserInfo }
+                                    paginationClickCollaborators = { paginationClickCollaborators }
                                 />
                             </Card.Body>
                         </Accordion.Collapse>
@@ -49,9 +60,8 @@ const UsersList = (
         )
 };
 
-
 UsersList.propTypes = {
-    membersList: PropTypes.array,
+    usersList: PropTypes.array,
     collaboratorsList: PropTypes.array,
     getUserInfo: PropTypes.func,
     paginationClickUsers : PropTypes.func,

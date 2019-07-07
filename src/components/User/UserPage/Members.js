@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import { Col, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import PaginationButtons from "../../Pagination/PaginationButtons";
-import { paginationClickUsers } from '../../../services/paginationServices';
-import getUserInfo from '../../../services/getUserInfo';
 
 
-const Members = ({ membersList, activePage }) => {
+const Members = ({ usersList, usersLinks, activePage, getUserInfo, paginationClickUsers }) => {
     return(
         <>
-            {membersList.map((item) =>
+            {usersList.map((item) =>
                     <div key = { item.id }>
                         <Row className = 'py-3'>
                             <Col xs = {3} className = 'text-center'>
@@ -55,11 +53,12 @@ const Members = ({ membersList, activePage }) => {
                         </Row>
                     </div>
                 )}
-                {(membersList.length > 29) ?
+                {(usersList.length > 29) ?
                     (
                         <PaginationButtons
                             method = { paginationClickUsers }
                             activePage = { activePage }
+                            links = { usersLinks }
                         />
                     ) : (null)
                 }
@@ -68,9 +67,8 @@ const Members = ({ membersList, activePage }) => {
     )
 };
 
-
 Members.propTypes = {
-    membersList : PropTypes.array,
+    usersList : PropTypes.array,
     paginationClickUsers : PropTypes.func,
     activePage : PropTypes.string
 };

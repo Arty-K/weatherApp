@@ -11,6 +11,10 @@ const FollowersList = (
         following,
         followersList,
         followingList,
+        followersLinks,
+        followingLinks,
+        paginationClickFollowers,
+        paginationClickFollowing,
         activePage
     }) => {
         return (
@@ -27,7 +31,10 @@ const FollowersList = (
                             <Card.Body>
                                 <Followers
                                     followersList = { followersList }
+                                    followersLinks = { followersLinks }
+                                    paginationClickFollowers = { paginationClickFollowers }
                                     activePage ={ activePage }
+
                                 />
                             </Card.Body>
                         </Accordion.Collapse>
@@ -42,6 +49,8 @@ const FollowersList = (
                             <Card.Body>
                                 <Following
                                     followingList = { followingList }
+                                    followingLinks = { followingLinks }
+                                    paginationClickFollowing = { paginationClickFollowing }
                                     activePage ={ activePage }
                                 />
                             </Card.Body>
@@ -50,7 +59,6 @@ const FollowersList = (
             </>
     )
 };
-
 
 FollowersList.propTypes = {
     followersList: PropTypes.array,

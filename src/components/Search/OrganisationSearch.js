@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PaginationButtons from '../Pagination/PaginationButtons';
 import OrganisationList from '../Organisation/OrganisationPage/OrganisationList';
-
-import { paginationClickOrgs } from '../../services/paginationServices';
-
+import { connect } from 'react-redux';
+import { getSearchResult } from '../../store/actions/getSearchResult'
+import { getOrganisation } from '../../store/actions/getOrganisation'
+import { paginationClickOrganisation } from '../../store/actions/pagination'
 import {
     Container,
     Row,
@@ -15,35 +16,47 @@ import {
 } from 'react-bootstrap';
 
 
-export default class OrganisationSearch extends Component {
-    state = {};
+class OrganisationSearch extends Component {
+  state = {
+      inputValue: ''
+  };
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.props.getSearchResult(this.state.inputValue)
+    };
+
+    onSearchChange = ( event ) => {
+        const inputValue = event.target.value;
+        console.log(inputValue+' from onSearchChange');
+        this.setState({ inputValue });
+    };
 
     render(){
-        const {
-            inputValue,
-            onSearchChange,
-            organisationList,
+        const { 
             isLoading,
-            getSearchResult,
-            activePage
-    } = this.props;
+            organisationList,
+            activePage,
+            error,
+            organisationLinks,
+            getOrganisation,
+            paginationClickOrganisation
+        } = this.props;
         return(
         <>
             <Container>
                 <Row className = 'pt-5 pb-2'>
                     <Col/>
                     <Col xs = {8}>
-                        <Form
-                            onSubmit = { e => getSearchResult(e) }
-                        >
+                        <Form onSubmit = { e => this.handleSubmit(e)} >
                             <Form.Group>
                                 <InputGroup className = 'mb-2'>
                                     <Form.Control
                                         size = 'lg'
                                         type = 'text'
                                         placeholder = 'type organisation name here'
-                                        value = { inputValue }
-                                        onChange = { onSearchChange }
+                                        value = { this.state.inputValue }
+                                        onChange = { this.onSearchChange }
                                         required
                                     />
 
@@ -64,16 +77,20 @@ export default class OrganisationSearch extends Component {
                 <Row className = 'py-3'>
                     <Col/>
                     <Col xs = {8}>
-                        {!isLoading ? (
+                        {(!isLoading && Object.entries(organisationList).length !== 0) ? (
                             <>
                                 <OrganisationList
                                     organisationList = { organisationList }
+                                    isLoading = { isLoading }
+                                    getOrganisation = { getOrganisation }
+                                    error = { error }
                                 />
                                 {(organisationList.total_count > 30) ?
                                     (
                                         <PaginationButtons
-                                            method = { paginationClickOrgs }
+                                            method = { paginationClickOrganisation }
                                             activePage = { activePage }
+                                            links = { organisationLinks }
                                         />
                                     ) : (null)
                                 }
@@ -86,11 +103,30 @@ export default class OrganisationSearch extends Component {
                 </Row>
             </Container>
         </>
-    )
+        )
     }
 
+}
+
+const mapStateToProps = ( state ) => {
+    return {
+        isLoading: state.isLoading,
+        organisationList: state.organisationList,
+        organisationLinks: state.organisationLinks,
+        activePage: state.activePage,
+        inputValue: state.inputValue,
+        error: state.error,
+        collaboratorsLinks: state.collaboratorsLinks,
+    }
 };
 
+const mapDispatchToProps = ( dispatch ) => {
+    return {
+        getSearchResult: (value) => dispatch(getSearchResult(value)),
+        getOrganisation: (orgName) => dispatch(getOrganisation(orgName)),
+        paginationClickOrganisation: (page) => dispatch(paginationClickOrganisation(page))
+    }
+};
 
 OrganisationSearch.propTypes = {
     inputValue : PropTypes.string,
@@ -100,7 +136,10 @@ OrganisationSearch.propTypes = {
     organisationList : PropTypes.object,
     isLoading : PropTypes.bool,
     activePage : PropTypes.string,
-    getOrganisationInfo : PropTypes.func,
+    getOrganisation : PropTypes.func,
     paginationClick : PropTypes.func,
     paginationClickOrgs : PropTypes.func
 };
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(OrganisationSearch)

@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 import { Col, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import PaginationButtons from "../../Pagination/PaginationButtons";
-import { paginationClickCollaborators } from '../../../services/paginationServices';
-import getUserInfo from '../../../services/getUserInfo';
 
 
-const Collaborators = ({ collaboratorsList, activePage }) => {
+const Collaborators = ({ collaboratorsList, collaboratorsLinks, activePage, getUserInfo, paginationClickCollaborators }) => {
     return (
         <>
             {collaboratorsList.map((item) =>
@@ -52,13 +50,13 @@ const Collaborators = ({ collaboratorsList, activePage }) => {
                     <PaginationButtons
                         method = { paginationClickCollaborators }
                         activePage={ activePage }
+                        links = { collaboratorsLinks }
                     />
                 ) : (null)
             }
         </>
     )
 };
-
 
 Collaborators.propTypes = {
     collaboratorsList : PropTypes.array,

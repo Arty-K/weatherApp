@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Image, Row } from 'react-bootstrap';
 import PaginationButtons from "../../Pagination/PaginationButtons";
-import { paginationClickFollowing } from '../../../services/paginationServices';
 
 
-const Following = ({ followingList, activePage }) => {
+const Following = ({ followingList, followingLinks, activePage, paginationClickFollowing }) => {
     return(
         <>
             {followingList.map((item) =>
@@ -32,6 +31,7 @@ const Following = ({ followingList, activePage }) => {
                     <PaginationButtons
                         method = { paginationClickFollowing }
                         activePage = { activePage }
+                        links = { followingLinks }
                     />
                 ) : (null)
             }
@@ -39,7 +39,6 @@ const Following = ({ followingList, activePage }) => {
 
     )
 };
-
 
 Following.propTypes = {
     followingList : PropTypes.array,

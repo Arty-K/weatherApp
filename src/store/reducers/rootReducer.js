@@ -1,135 +1,46 @@
-const initialState = {
-    inputValue : '',
-    error : null,
-    isLoading : false,
-    activePage : '1',
-    organisationList : {},
-    organisationLinks : {},
-    currentOrganisation : {},
-    followersList : [],
-    followingList : [],
-    followersLinks : {},
-    followingLinks : {},
-    currentUser : {},
-    usersLinks : {},
-    usersList : [],
-    collaboratorsList : [],
-    collaboratorsLinks : {}
-};
+import { initialState } from './initialState';
 
 
 export const rootReducer = (state = initialState, action) => {
     switch (action.type) {
-
-        case 'GET_SEARCH_RESULT':
+        case 'GET_SEARCH_RESULT_LOADING':
             return {
                 ...state,
-                inputValue : action.newData.inputValue,
-                organisationLinks : action.newData.organisationLinks,
-                organisationList : action.newData.organisationList,
-                activePage : action.newData.activePage,
-                isLoading : action.newData.isLoading
+                isLoading : true
             };
         case 'GET_SEARCH_RESULT_ERROR':
             return {
                 ...state,
-                error: action.error
+                errorCode:  action.newData.errorCode,
+                errorMessage:  action.newData.errorMessage
             };
-        case 'GET_ORGANISATION':
+        case 'GET_SEARCH_RESULT_SUCCESS':
             return {
                 ...state,
-                isLoading : action.newData.isLoading,
-                currentOrganisation : action.newData.currentOrganisation,
-                usersLinks : action.newData.usersLinks,
-                usersList : action.newData.usersList,
-                collaboratorsLinks : action.newData.collaboratorsLinks,
-                collaboratorsList : action.newData.collaboratorsList,
+                inputValue: action.newData.inputValue,
+                currentData:action.newData.currentData,
+                forecastData : action.newData.forecastData,
+                isLoading : false,
             };
-        case 'GET_ORGANISATION_ERROR':
+        case 'PUSH_INPUT_HISTORY':
             return {
                 ...state,
-                error: action.error
+                inputArray : action.newData.inputArray,
             };
-        case 'GET_USER_INFO':
+        case 'ON_HISTORY_CLICK':
             return {
                 ...state,
-                usersLinks : action.newData.usersLinks,
-                currentUser : action.newData.currentUser,
-                followersLinks : action.newData.followersLinks,
-                followersList : action.newData.followersList,
-                followingLinks : action.newData.followingLinks,
-                followingList : action.newData.followingList,
-                isLoading : action.newData.isLoading
+                city : action.newData.city,
             };
-        case 'GET_USER_INFO_ERROR':
+        case 'PUSH_DUPLICATE_MESSAGE_TRUE':
             return {
                 ...state,
-                error: action.error
+                duplicateRequestMessage : true,
             };
-        case 'CLICK_ORGANISATION':
+        case 'PUSH_DUPLICATE_MESSAGE_FALSE':
             return {
                 ...state,
-                organisationLinks : action.newData.organisationLinks,
-                organisationList : action.newData.organisationList,
-                activePage : action.newData.activePage,
-                isLoading : action.newData.isLoading
-            };
-        case 'CLICK_ORGANISATION_ERROR':
-            return {
-                ...state,
-                error: action.error
-            };
-        case 'CLICK_USERS':
-            return {
-                ...state,
-                usersLinks : action.newData.usersLinks,
-                usersList : action.newData.usersList,
-                activePage : action.newData.activePage,
-                isLoading : action.newData.isLoading
-            };
-        case 'CLICK_USERS_ERROR':
-            return {
-                ...state,
-                error: action.error
-            };
-        case 'CLICK_COLLABORATORS':
-            return {
-                ...state,
-                collaboratorsLinks : action.newData.collaboratorsLinks,
-                collaborators : action.newData.collaborators,
-                activePage : action.newData.activePage,
-                isLoading : action.newData.isLoading
-            };
-        case 'CLICK_COLLABORATORS_ERROR':
-            return {
-                ...state,
-                error: action.error
-            };
-        case 'CLICK_FOLLOWERS':
-            return {
-                ...state,
-                followersLinks : action.newData.followersLinks,
-                followersList : action.newData.followersList,
-                activePage : action.newData.activePage,
-                isLoading : action.newData.isLoading
-            };
-        case 'CLICK_FOLLOWERS_ERROR':
-            return {
-                ...state,
-                error: action.error
-            };
-        case 'CLICK_FOLLOWING':
-            return {
-                ...state,
-                followingLinks : action.newData.followingLinks,
-                followingList : action.newData.followingList,
-                activePage : action.newData.activePage,
-                isLoading : action.newData.isLoading
-            };
-        case 'CLICK_FOLLOWING_ERROR':
-            return {
-                ...state,
-                error: action.error
+                duplicateRequestMessage : false,
             };
         default:
             return state

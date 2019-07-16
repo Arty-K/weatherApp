@@ -1,17 +1,58 @@
 ::-webkit-scrollbar {
   width: 0;  /* Remove scrollbar space */
 }
+
 ul, li {
   list-style: none;
 }
+
+td, th {
+  text-align: center;
+}
+
 .pagination {
   justify-content: space-between;
 }
+
 .organisationAvatar {
    width: 150px;
    height: 150px;
 }
+
 .userAvatar {
   width: 115px;
   height: 115px;
+}
+
+.page {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+}
+
+.page-container {
+  position: absolute;
+
+}
+
+.page-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
 }
